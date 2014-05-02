@@ -14,6 +14,7 @@ Level resets when ball falls
 
 notes:
 -Textures from cgtextures.com
+-Sounds from freesound.org
 -Debug.Log(String) is a console printer for debugging
 -Edit>Project Settings>Quality to change quality levels for 
 whatever platform it's running on.
@@ -24,3 +25,4 @@ use it as a trigger for something instead.
 -for animation, set simulation space to World to make it NOT follow the source as the source moves.
 -Velocity over Lifetime in particle system is great for simulating wind
 -Use Transorm object whenever you are going to spawn something
+-User StartCoroutine(method) to call other methods

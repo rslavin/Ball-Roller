@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BallHealth : MonoBehaviour {
 	public int maxFallDistance = -10;
+	private bool isRestarting = false;
 
 	// Update is called once per frame
 	void Update () {
@@ -13,7 +14,19 @@ public class BallHealth : MonoBehaviour {
 			// make sure to add the level to File>Build Settings
 			// in order for the String to properly reference it
 			// when multiple scenes exist
-			Application.LoadLevel ("MainLevel");
+			if(!isRestarting){
+				StartCoroutine(RestartLevel());
+			}
 		}
+	}
+
+	// has to be IEnumerator because of the yield
+	IEnumerator RestartLevel(){
+		Debug.Log ("DEAD");
+		isRestarting = true;
+		audio.Play ();// empty means it will play the first audio attached
+		yield return new WaitForSeconds (audio.clip.length);
+		Application.LoadLevel ("MainLevel");
+		isRestarting = false;
 	}
 }

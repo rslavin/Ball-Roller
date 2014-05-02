@@ -9,6 +9,10 @@ public class GameMaster : MonoBehaviour {
 	public float sizeX = 100;
 	public float sizeY = 40;
 
+	void Start(){
+				currentScore = 0;
+	}
+
 	/*
 	// use this as a temporary var so we can view the 
 	// score in unity as a public variable
