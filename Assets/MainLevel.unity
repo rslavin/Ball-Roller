@@ -85,6 +85,8 @@ GameObject:
   - 33: {fileID: 484920411}
   - 135: {fileID: 484920410}
   - 23: {fileID: 484920409}
+  - 114: {fileID: 484920413}
+  - 54: {fileID: 484920414}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -139,10 +141,39 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 484920408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02381754, z: 0}
+  m_LocalPosition: {x: 0, y: 3.32066774, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &484920413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484920408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d171aa76ed66e6641bb0bbbdaad7bc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 100
+  jumpHeight: 8
+  doubleJump: 0
+--- !u!54 &484920414
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 484920408}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &705737022
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +255,7 @@ GameObject:
   - 92: {fileID: 1722929735}
   - 124: {fileID: 1722929734}
   - 81: {fileID: 1722929733}
+  - 114: {fileID: 1722929738}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -292,6 +324,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &1722929738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722929732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44f4015a0257da42b5235af6b3ac6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 484920412}
+  distance: -10
+  lift: 1.5
 --- !u!1 &1786969051
 GameObject:
   m_ObjectHideFlags: 0
