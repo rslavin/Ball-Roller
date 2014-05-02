@@ -12,6 +12,9 @@ public class CoinPickup : MonoBehaviour {
 		if (info.tag.Equals ("Player")) {
 			//Debug.Log ("coin picked up");
 
+			// increment score
+			GameMaster.currentScore++;
+
 			// create the coin effect particles
 			Transform effect = (Transform) Instantiate(coinEffect, transform.position, transform.rotation);
 
