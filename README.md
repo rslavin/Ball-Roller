@@ -7,6 +7,8 @@ Space or W  - jump
 
 Features:
 Camera follows ball
+Added directional light and shadows
+
 
 
 
