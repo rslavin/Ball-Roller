@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class CoinPickup : MonoBehaviour {
+	public Transform coinEffect;
 
 	// Called when something enters it
 	void OnTriggerEnter (Collider info) {
@@ -11,8 +12,14 @@ public class CoinPickup : MonoBehaviour {
 		if (info.tag.Equals ("Player")) {
 			//Debug.Log ("coin picked up");
 
+			// create the coin effect particles
+			Transform effect = (Transform) Instantiate(coinEffect, transform.position, transform.rotation);
+
+			// second param is a timer in seconds
+			Destroy (effect.gameObject, 3);
 			// gameObject is the object the script is attached to
 			Destroy (gameObject);
+
 		}
 	}
 }
