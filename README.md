@@ -6,4 +6,9 @@ D           - move right
 Space or W  - jump
 
 Features:
-Camera follows ball.
+Camera follows ball
+
+
+
+notes:
+Textures from cgtextures.com
