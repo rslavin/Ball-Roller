@@ -8,9 +8,12 @@ public class GameMaster : MonoBehaviour {
 	public float offsetY = 40;
 	public float sizeX = 100;
 	public float sizeY = 40;
+	public static bool playMusic;
 
 	void Start(){
-				currentScore = 0;
+		// reset everything
+		currentScore = 0;
+		playMusic = true;
 	}
 
 	/*
@@ -22,6 +25,13 @@ public class GameMaster : MonoBehaviour {
 		test = currentScore;
 	}
 	*/
+
+	void Update(){
+		// check if another object wants music to stop
+		if(!playMusic){
+			audio.Stop();
+		}
+	}
 
 	void OnGUI(){
 		GUI.Box (new Rect ((Screen.width / 2) - (sizeX /2), Screen.height/20, sizeX, sizeY), "Score\n"+currentScore);

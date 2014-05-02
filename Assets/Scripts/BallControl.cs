@@ -7,8 +7,11 @@ public class BallControl : MonoBehaviour {
 	public int rotationSpeed = 100;
 	public int jumpHeight = 8;
 	public bool doubleJump = true;
+	public AudioClip hit1, hit2, hit3;
 
 	private bool isFalling = false;
+	private bool playOnce = true;
+
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +44,7 @@ public class BallControl : MonoBehaviour {
 			Vector3 currentV = rigidbody.velocity;
 			currentV.y = jumpHeight;
 			rigidbody.velocity = currentV;
+			StartCoroutine(playOnceTrue ());
 		}
 		if (!doubleJump)
 			isFalling = true;
@@ -48,9 +52,40 @@ public class BallControl : MonoBehaviour {
 
 	}
 
+	void OnCollisionExit(){
+			playOnce = true;
+	}
+
 	// this function is provided by Unity
 	// is called when a collision happens.
 	void OnCollisionStay(){
+
+		if (playOnce) {
+			int theHit = Random.Range (0, 2);
+			audio.pitch = Random.Range ((float)0.9, (float)1.1);
+			switch (theHit){
+				case 0:					
+					audio.clip = hit1;
+					break;
+				case 1:
+					audio.clip = hit2;
+					break;
+				case 2:
+					audio.clip = hit3;
+					break;
+				default:
+					Debug.Log("default case!");
+					break;
+			}
+			audio.Play();
+			playOnce = false;
+		}
 		isFalling = false;
+	}
+
+	// added a pause otherwise the switch doesn't occur
+	IEnumerator playOnceTrue(){
+		yield return new WaitForSeconds ((float)0.1);
+		playOnce = true;
 	}
 }
