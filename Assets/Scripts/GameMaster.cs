@@ -14,6 +14,7 @@ public class GameMaster : MonoBehaviour {
 		// reset everything
 		currentScore = 0;
 		playMusic = true;
+		BallControl.isFalling = true;
 	}
 
 	/*

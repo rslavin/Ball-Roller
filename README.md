@@ -12,7 +12,8 @@ Level resets when ball falls
 Coins have sound and particle affects when picked up
 Score is increased as play picks up coins
 Sound of ball changes pitch and audio on each hit
-
+Pink blocks are bouncy
+Pink blocks are animated when bounced on
 
 notes:
 -Textures from cgtextures.com
