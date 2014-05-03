@@ -1,11 +1,11 @@
-<p>This is my first attempt at using Unity to create a game</p>
+#This is my first attempt at using Unity to create a game
 
-<h2>Controls:</h2>
-<ul>
-<li>A           - move left</li>
-<li>D           - move right</li>
-<li>Space or W  - jump</li>
-</ul>
+#Controls:
+
+A           - move left
+D           - move right
+Space or W  - jump
+
 
 <h2>Features:</h2>
 <ul>
@@ -20,8 +20,8 @@
 </ul>
 
 <h2>Notes:</h2>
-- Textures from cgtextures.com
-- Sounds from freesound.org
+* Textures from cgtextures.com
+* Sounds from freesound.org
 - Debug.Log(String) is a console printer for debugging
 - Edit>Project Settings>Quality to change quality levels for 
 whatever platform it's running on.
