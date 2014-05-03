@@ -2,12 +2,12 @@
 
 #Controls:
 
-A           - move left
-D           - move right
-Space or W  - jump
+- A           - move left
+- D           - move right
+- Space or W  - jump
 
 
-Features:
+#Features:
 
 - Camera follows ball
 - Added directional light and shadows
@@ -18,10 +18,10 @@ Features:
 - Pink blocks are bouncy
 - Pink blocks are animated when bounced on
 
-Notes:
+#Notes:
 
-* Textures from cgtextures.com
-* Sounds from freesound.org
+- Textures from cgtextures.com
+- Sounds from freesound.org
 - Debug.Log(String) is a console printer for debugging
 - Edit>Project Settings>Quality to change quality levels for 
 whatever platform it's running on.
