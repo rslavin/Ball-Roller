@@ -93,7 +93,6 @@ public class BallControl : MonoBehaviour {
 						break;
 				}
 		} else {
-			Debug.Log ("collision enter bouncy");
 			bouncy = true;
 			audio.clip = thump;
 		}
