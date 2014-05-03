@@ -7,19 +7,19 @@ D           - move right
 Space or W  - jump
 
 
-<h2>Features:</h2>
-<ul>
-<li>Camera follows ball</li>
-<li>Added directional light and shadows</li>
-<li>Level resets when ball falls</li>
-<li>Coins have sound and particle affects when picked up</li>
-<li>Score is increased as play picks up coins</li>
-<li>Sound of ball changes pitch and audio on each hit</li>
-<li>Pink blocks are bouncy</li>
-<li>Pink blocks are animated when bounced on</li>
-</ul>
+Features:
 
-<h2>Notes:</h2>
+- Camera follows ball
+- Added directional light and shadows
+- Level resets when ball falls
+- Coins have sound and particle affects when picked up
+- Score is increased as play picks up coins
+- Sound of ball changes pitch and audio on each hit
+- Pink blocks are bouncy
+- Pink blocks are animated when bounced on
+
+Notes:
+
 * Textures from cgtextures.com
 * Sounds from freesound.org
 - Debug.Log(String) is a console printer for debugging
